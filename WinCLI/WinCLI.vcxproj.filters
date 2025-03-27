@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Command files">
+      <UniqueIdentifier>{fc2f70e7-c907-41c5-8d0c-d107266026ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command Header files">
+      <UniqueIdentifier>{01222103-7ebd-48a2-bbc3-c2710179ea98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Concrete Command Files">
+      <UniqueIdentifier>{01979e4e-8f7d-407a-aa36-05dd787cfe40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Concrete Command Header Files">
+      <UniqueIdentifier>{8454df92-456a-487f-98d8-a62405d70639}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\WCLI\CLIContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\WCLI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\Command.h">
+      <Filter>Command Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\DirectoryCommand.h">
+      <Filter>Command Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\OutputCommand.h">
+      <Filter>Command Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\StdCommand.h">
+      <Filter>Command Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\CD.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\CLS.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\DIR.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Echo.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Help.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\PopD.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\PushD.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Quit.h">
+      <Filter>Concrete Command Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\WCLI\CLIContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\WCLI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\WinCLI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Command\Command.cpp">
+      <Filter>Command files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Command\DirectoryCommand.cpp">
+      <Filter>Command files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Command\OutputCommand.cpp">
+      <Filter>Command files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Command\StdCommand.cpp">
+      <Filter>Command files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\CD.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\DIR.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Echo.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Help.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\PopD.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\PushD.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Quit.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\CLS.cpp">
+      <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
