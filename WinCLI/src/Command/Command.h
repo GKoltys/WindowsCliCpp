@@ -7,12 +7,10 @@
 class Command
 {
 public:
-    virtual ~Command();
-    virtual void execute(CLIContext ctx);
-
-protected:
-    virtual std::string getName() const;
-    virtual std::string getPrefix() const;
+    virtual ~Command() = default;
+    virtual void execute(CLIContext& ctx) = 0;
+    virtual std::string getName() const = 0;
+    virtual std::string getPrefix() const = 0;
 };
 
 #endif

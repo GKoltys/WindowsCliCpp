@@ -7,7 +7,7 @@
 class StdCommand : public Command
 {
 protected:
-    std::string getPrefix();
+    std::string getPrefix() const override;
 };
 
 #endif

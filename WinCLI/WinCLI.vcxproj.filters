@@ -98,9 +98,6 @@
     <ClCompile Include="src\WCLI\WinCLI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Command\Command.cpp">
-      <Filter>Command files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Command\DirectoryCommand.cpp">
       <Filter>Command files</Filter>
     </ClCompile>
