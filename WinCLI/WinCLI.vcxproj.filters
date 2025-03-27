@@ -63,19 +63,19 @@
     <ClInclude Include="src\ConcreteCommand\DIR.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\Echo.h">
+    <ClInclude Include="src\ConcreteCommand\ECHO.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\Help.h">
+    <ClInclude Include="src\ConcreteCommand\HELP.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\PopD.h">
+    <ClInclude Include="src\ConcreteCommand\POPD.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\PushD.h">
+    <ClInclude Include="src\ConcreteCommand\PUSHD.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\Quit.h">
+    <ClInclude Include="src\ConcreteCommand\QUIT.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,19 +116,19 @@
     <ClCompile Include="src\ConcreteCommand\DIR.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\Echo.cpp">
+    <ClCompile Include="src\ConcreteCommand\ECHO.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\Help.cpp">
+    <ClCompile Include="src\ConcreteCommand\HELP.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\PopD.cpp">
+    <ClCompile Include="src\ConcreteCommand\POPD.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\PushD.cpp">
+    <ClCompile Include="src\ConcreteCommand\PUSHD.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\Quit.cpp">
+    <ClCompile Include="src\ConcreteCommand\QUIT.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ConcreteCommand\CLS.cpp">
