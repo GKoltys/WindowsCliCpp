@@ -6,9 +6,10 @@
 
 namespace Utils
 {
+    std::string currentPath();
     std::vector<std::string> parse(std::string cmdIn);
-    std::string getTime();
-    bool verifyPath(std::string path);
+    std::string getDateTime();
+    bool verifyPath(const std::string& path);
 };
 
 #endif

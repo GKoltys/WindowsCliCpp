@@ -1,10 +1,11 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+// Need to review
 class Config
 {
 protected:
-    bool isDebugMode() const;
+    const bool isDebugMode() const;
     void enableDebugMode();
     void disableDebugMode();
 

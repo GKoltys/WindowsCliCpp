@@ -7,10 +7,15 @@
 class CLIContext
 {
 public:
-    void changeDir(std::string newDir);
+    CLIContext();
+    ~CLIContext();
+
+    std::string getCurrentDir() const;
+    std::stack<std::string> getStack() const;
 
 protected:
-    std::string getCurrentDir() const;
+    void changeDir(std::string newDir);
+    void changeExitState();
 
 private:
     std::string _currentDir;

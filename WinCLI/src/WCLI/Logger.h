@@ -6,7 +6,7 @@
 class Logger
 {
 public:
-    static void init(const std::string& filename = "stackLog.txt");
+    static void init(const std::string& filename = "WCLILog.txt");
     static void close();
 
     static void log(const std::string& message);
