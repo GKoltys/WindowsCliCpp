@@ -78,6 +78,9 @@
     <ClInclude Include="src\ConcreteCommand\Quit.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\WCLI\CommandInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\WCLI\CliContext.cpp">
@@ -130,6 +133,9 @@
     </ClCompile>
     <ClCompile Include="src\ConcreteCommand\Cls.cpp">
       <Filter>Concrete Command Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\CommandInput.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,13 +4,14 @@
 #include "CLIContext.h"
 #include "Logger.h"
 #include "Config.h"
+#include "CommandInput.h"
 
 class WCLI
 {
 public:
     WCLI();
     void run();
-    void executeCommand();
+    void executeCommand(const CommandInput& input);
 
 private:
     CLIContext _context;

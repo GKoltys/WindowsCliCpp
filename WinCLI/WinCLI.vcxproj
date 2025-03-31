@@ -32,6 +32,7 @@
     <ClInclude Include="src\ConcreteCommand\Pushd.h" />
     <ClInclude Include="src\ConcreteCommand\Quit.h" />
     <ClInclude Include="src\WCLI\CliContext.h" />
+    <ClInclude Include="src\WCLI\CommandInput.h" />
     <ClInclude Include="src\WCLI\Config.h" />
     <ClInclude Include="src\WCLI\Logger.h" />
     <ClInclude Include="src\WCLI\Utils.h" />
@@ -50,6 +51,7 @@
     <ClCompile Include="src\ConcreteCommand\Pushd.cpp" />
     <ClCompile Include="src\ConcreteCommand\Quit.cpp" />
     <ClCompile Include="src\WCLI\CliContext.cpp" />
+    <ClCompile Include="src\WCLI\CommandInput.cpp" />
     <ClCompile Include="src\WCLI\Config.cpp" />
     <ClCompile Include="src\WCLI\Logger.cpp" />
     <ClCompile Include="src\WCLI\Utils.cpp" />
