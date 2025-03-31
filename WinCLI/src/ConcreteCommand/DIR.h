@@ -3,7 +3,7 @@
 
 #include "../Command/DirectoryCommand.h"
 
-class DIR : public DirectoryCommand
+class Dir : public DirectoryCommand
 {
 public:
     void execute(CLIContext ctx);

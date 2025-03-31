@@ -3,9 +3,7 @@
 
 using namespace std;
 
-OutputCommand::OutputCommand(vector<string> args) : _args(args) {}
-
-OutputCommand::~OutputCommand() {}
+OutputCommand::OutputCommand(const vector<string>& args) : _args(args) {}
 
 string OutputCommand::getPrefix() const
 {

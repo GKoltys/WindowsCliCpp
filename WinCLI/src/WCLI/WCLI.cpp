@@ -2,6 +2,14 @@
 #include <string>
 #include "WCLI.h"
 #include "Utils.h"
+#include "../ConcreteCommand/Cd.h"
+#include "../ConcreteCommand/Cls.h"
+#include "../ConcreteCommand/Dir.h"
+#include "../ConcreteCommand/Echo.h"
+#include "../ConcreteCommand/Help.h"
+#include "../ConcreteCommand/Popd.h"
+#include "../ConcreteCommand/pushd.h"
+#include "../ConcreteCommand/Quit.h"
 
 using namespace std;
 
@@ -22,7 +30,7 @@ void WCLI::run()
         CommandInput command(cmdIn);
 
         executeCommand(command);
-        cout << cmdIn << endl;
+        //cout << cmdIn << endl;
     }
 }
 
@@ -40,11 +48,12 @@ void WCLI::executeCommand(const CommandInput& input)
         }
         else if (commandInput == "dir")
         {
-
+            ;
         }
         else if (commandInput == "echo")
         {
-
+            Echo toExecute(input.getArgs());
+            toExecute.execute(_context);
         }
         else if (commandInput == "help")
         {

@@ -3,7 +3,7 @@
 
 #include "../Command/DirectoryCommand.h"
 
-class POPD : public DirectoryCommand
+class Popd : public DirectoryCommand
 {
 public:
     void execute(CLIContext ctx);

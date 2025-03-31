@@ -3,7 +3,7 @@
 
 #include "../Command/StdCommand.h"
 
-class QUIT : public StdCommand
+class Quit : public StdCommand
 {
 public:
     void execute(CLIContext ctx);

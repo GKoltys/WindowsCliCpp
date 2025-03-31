@@ -3,7 +3,7 @@
 
 #include "../Command/OutputCommand.h"
 
-class HELP : public OutputCommand
+class Help : public OutputCommand
 {
 public:
     void execute(CLIContext ctx);

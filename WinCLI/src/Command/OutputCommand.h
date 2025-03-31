@@ -8,8 +8,8 @@
 class OutputCommand : public Command
 {
 public:
-    OutputCommand(std::vector<std::string> args);
-    ~OutputCommand();
+    OutputCommand(const std::vector<std::string>& args);
+    virtual ~OutputCommand() = default;
 
 protected:
     std::string getPrefix() const override;

@@ -3,13 +3,15 @@
 
 #include "../Command/OutputCommand.h"
 
-class ECHO : public OutputCommand
+class Echo : public OutputCommand
 {
 public:
-    void execute(CLIContext ctx);
+    Echo(const std::vector<std::string>& args);
+
+    void execute(CLIContext& ctx) override;
 
 protected:
-    std::string getName();
+    std::string getName() const override;
 };
 
 #endif
