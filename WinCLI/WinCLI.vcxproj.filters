@@ -27,7 +27,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\WCLI\CLIContext.h">
+    <ClInclude Include="src\WCLI\CliContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\WCLI\Config.h">
@@ -39,7 +39,7 @@
     <ClInclude Include="src\WCLI\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\WCLI\WCLI.h">
+    <ClInclude Include="src\WCLI\Wcli.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Command\Command.h">
@@ -54,33 +54,33 @@
     <ClInclude Include="src\Command\StdCommand.h">
       <Filter>Command Header files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\CD.h">
+    <ClInclude Include="src\ConcreteCommand\Cd.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\CLS.h">
+    <ClInclude Include="src\ConcreteCommand\Cls.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\DIR.h">
+    <ClInclude Include="src\ConcreteCommand\Dir.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\ECHO.h">
+    <ClInclude Include="src\ConcreteCommand\Echo.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\HELP.h">
+    <ClInclude Include="src\ConcreteCommand\Help.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\POPD.h">
+    <ClInclude Include="src\ConcreteCommand\Popd.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\PUSHD.h">
+    <ClInclude Include="src\ConcreteCommand\Pushd.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\QUIT.h">
+    <ClInclude Include="src\ConcreteCommand\Quit.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\WCLI\CLIContext.cpp">
+    <ClCompile Include="src\WCLI\CliContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\WCLI\Config.cpp">
@@ -92,10 +92,10 @@
     <ClCompile Include="src\WCLI\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\WCLI\WCLI.cpp">
+    <ClCompile Include="src\WCLI\Wcli.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\WCLI\WinCLI.cpp">
+    <ClCompile Include="src\WCLI\WinCli.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Command\DirectoryCommand.cpp">
@@ -107,28 +107,28 @@
     <ClCompile Include="src\Command\StdCommand.cpp">
       <Filter>Command files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\CD.cpp">
+    <ClCompile Include="src\ConcreteCommand\Cd.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\DIR.cpp">
+    <ClCompile Include="src\ConcreteCommand\Dir.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\ECHO.cpp">
+    <ClCompile Include="src\ConcreteCommand\Echo.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\HELP.cpp">
+    <ClCompile Include="src\ConcreteCommand\Help.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\POPD.cpp">
+    <ClCompile Include="src\ConcreteCommand\Popd.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\PUSHD.cpp">
+    <ClCompile Include="src\ConcreteCommand\Pushd.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\QUIT.cpp">
+    <ClCompile Include="src\ConcreteCommand\Quit.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\CLS.cpp">
+    <ClCompile Include="src\ConcreteCommand\Cls.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
   </ItemGroup>
