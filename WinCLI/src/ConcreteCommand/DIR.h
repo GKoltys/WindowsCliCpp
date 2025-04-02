@@ -6,10 +6,10 @@
 class Dir : public DirectoryCommand
 {
 public:
-    void execute(CliContext& ctx);
+    void execute(CliContext& ctx) override;
 
 protected:
-    std::string getName();
+    std::string getName() const override;
 };
 
 #endif

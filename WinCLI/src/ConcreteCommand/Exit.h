@@ -6,7 +6,7 @@
 class Exit : public StdCommand
 {
 public:
-    void execute(CliContext& ctx);
+    void execute(CliContext& ctx) override;
 
 protected:
     std::string getName() const override;

@@ -77,7 +77,8 @@ void WCLI::executeCommand(const CommandInput& input)
         }
         else if (commandInput == "cls")
         {
-
+            Cls toExecute;
+            toExecute.execute(_context);
         }
         else
         {
