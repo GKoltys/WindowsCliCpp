@@ -6,10 +6,10 @@
 class Exit : public StdCommand
 {
 public:
-    void execute(CliContext ctx);
+    void execute(CliContext& ctx);
 
 protected:
-    std::string getName();
+    std::string getName() const override;
 };
 
 #endif

@@ -1,5 +1,6 @@
 #include "CLIContext.h"
 #include "Utils.h"
+#include <iostream>
 
 using namespace std;
 using namespace Utils;
@@ -7,7 +8,7 @@ using namespace Utils;
 CliContext::CliContext() : 
     _currentDir(currentPath()),
     _dirStack(stack<string>()),
-    _shouldExit(false) {}
+    _exitState(false) {}
 
 CliContext::~CliContext() {}
 
@@ -21,7 +22,12 @@ void CliContext::changeDir(string newDir)
 
 void CliContext::changeExitState()
 {
-    _shouldExit = !_shouldExit;
+    _exitState = !_exitState;
+}
+
+bool CliContext::getExitState() const
+{
+    return _exitState;
 }
 
 string CliContext::getCurrentDir() const

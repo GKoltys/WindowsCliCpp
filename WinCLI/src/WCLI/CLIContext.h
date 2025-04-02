@@ -10,17 +10,17 @@ public:
     CliContext();
     ~CliContext();
 
-    std::string getCurrentDir() const;
-    std::stack<std::string> getStack() const;
-
-protected:
     void changeDir(std::string newDir);
     void changeExitState();
+
+    std::string getCurrentDir() const;
+    std::stack<std::string> getStack() const;
+    bool getExitState() const;
 
 private:
     std::string _currentDir;
     std::stack<std::string> _dirStack;
-    bool _shouldExit;
+    bool _exitState;
 };
 
 #endif

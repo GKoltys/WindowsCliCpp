@@ -6,7 +6,7 @@
 class Dir : public DirectoryCommand
 {
 public:
-    void execute(CliContext ctx);
+    void execute(CliContext& ctx);
 
 protected:
     std::string getName();

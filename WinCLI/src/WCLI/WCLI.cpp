@@ -20,7 +20,7 @@ WCLI::WCLI() : _context(CliContext()), _logger(Logger())
 
 void WCLI::run()
 {
-    while (true)
+    while (!_context.getExitState())
     {
         string cmdIn;
 
@@ -72,7 +72,8 @@ void WCLI::executeCommand(const CommandInput& input)
         }
         else if (commandInput == "exit")
         {
-
+            Exit toExecute;
+            toExecute.execute(_context);
         }
         else if (commandInput == "cls")
         {
