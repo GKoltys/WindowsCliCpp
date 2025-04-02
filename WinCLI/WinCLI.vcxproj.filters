@@ -75,7 +75,7 @@
     <ClInclude Include="src\ConcreteCommand\Pushd.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConcreteCommand\Quit.h">
+    <ClInclude Include="src\ConcreteCommand\Exit.h">
       <Filter>Concrete Command Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\WCLI\CommandInput.h">
@@ -128,7 +128,7 @@
     <ClCompile Include="src\ConcreteCommand\Pushd.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ConcreteCommand\Quit.cpp">
+    <ClCompile Include="src\ConcreteCommand\Exit.cpp">
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ConcreteCommand\Cls.cpp">

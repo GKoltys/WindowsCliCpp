@@ -3,10 +3,10 @@
 
 #include "../Command/StdCommand.h"
 
-class Quit : public StdCommand
+class Exit : public StdCommand
 {
 public:
-    void execute(CLIContext ctx);
+    void execute(CliContext ctx);
 
 protected:
     std::string getName();

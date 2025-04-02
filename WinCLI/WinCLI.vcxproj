@@ -30,7 +30,7 @@
     <ClInclude Include="src\ConcreteCommand\Help.h" />
     <ClInclude Include="src\ConcreteCommand\Popd.h" />
     <ClInclude Include="src\ConcreteCommand\Pushd.h" />
-    <ClInclude Include="src\ConcreteCommand\Quit.h" />
+    <ClInclude Include="src\ConcreteCommand\Exit.h" />
     <ClInclude Include="src\WCLI\CliContext.h" />
     <ClInclude Include="src\WCLI\CommandInput.h" />
     <ClInclude Include="src\WCLI\Config.h" />
@@ -49,7 +49,7 @@
     <ClCompile Include="src\ConcreteCommand\Help.cpp" />
     <ClCompile Include="src\ConcreteCommand\Popd.cpp" />
     <ClCompile Include="src\ConcreteCommand\Pushd.cpp" />
-    <ClCompile Include="src\ConcreteCommand\Quit.cpp" />
+    <ClCompile Include="src\ConcreteCommand\Exit.cpp" />
     <ClCompile Include="src\WCLI\CliContext.cpp" />
     <ClCompile Include="src\WCLI\CommandInput.cpp" />
     <ClCompile Include="src\WCLI\Config.cpp" />

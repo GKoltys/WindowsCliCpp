@@ -4,11 +4,11 @@
 #include <string>
 #include <stack>
 
-class CLIContext
+class CliContext
 {
 public:
-    CLIContext();
-    ~CLIContext();
+    CliContext();
+    ~CliContext();
 
     std::string getCurrentDir() const;
     std::stack<std::string> getStack() const;

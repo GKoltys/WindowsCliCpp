@@ -14,7 +14,7 @@ public:
     void executeCommand(const CommandInput& input);
 
 private:
-    CLIContext _context;
+    CliContext _context;
     Logger _logger;
     Config _config;
 };

@@ -4,14 +4,14 @@
 using namespace std;
 using namespace Utils;
 
-CLIContext::CLIContext() : 
+CliContext::CliContext() : 
     _currentDir(currentPath()),
     _dirStack(stack<string>()),
     _shouldExit(false) {}
 
-CLIContext::~CLIContext() {}
+CliContext::~CliContext() {}
 
-void CLIContext::changeDir(string newDir)
+void CliContext::changeDir(string newDir)
 {
     if (Utils::verifyPath(newDir))
     {
@@ -19,17 +19,17 @@ void CLIContext::changeDir(string newDir)
     }
 }
 
-void CLIContext::changeExitState()
+void CliContext::changeExitState()
 {
     _shouldExit = !_shouldExit;
 }
 
-string CLIContext::getCurrentDir() const
+string CliContext::getCurrentDir() const
 {
     return _currentDir;
 }
 
-stack<string> CLIContext::getStack() const
+stack<string> CliContext::getStack() const
 {
     return _dirStack;
 }

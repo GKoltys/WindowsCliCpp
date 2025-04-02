@@ -9,11 +9,11 @@
 #include "../ConcreteCommand/Help.h"
 #include "../ConcreteCommand/Popd.h"
 #include "../ConcreteCommand/pushd.h"
-#include "../ConcreteCommand/Quit.h"
+#include "../ConcreteCommand/Exit.h"
 
 using namespace std;
 
-WCLI::WCLI() : _context(CLIContext()), _logger(Logger())
+WCLI::WCLI() : _context(CliContext()), _logger(Logger())
 {
    //_config = Config();
 }
@@ -27,17 +27,19 @@ void WCLI::run()
         cout << _context.getCurrentDir() << ">";
         getline(cin, cmdIn);
 
+        if (cmdIn == "")
+        {
+            continue;
+        }
+
         CommandInput command(cmdIn);
 
         executeCommand(command);
-        //cout << cmdIn << endl;
     }
 }
 
 void WCLI::executeCommand(const CommandInput& input)
 {
-    cout << to_string(input.getArgCount()) << endl;
-
     string commandInput = input.getArgs()[0];
 
     try
@@ -57,7 +59,8 @@ void WCLI::executeCommand(const CommandInput& input)
         }
         else if (commandInput == "help")
         {
-
+            Help toExecute(input.getArgs());
+            toExecute.execute(_context);
         }
         else if (commandInput == "popd")
         {
@@ -67,7 +70,7 @@ void WCLI::executeCommand(const CommandInput& input)
         {
 
         }
-        else if (commandInput == "quit")
+        else if (commandInput == "exit")
         {
 
         }
@@ -82,6 +85,8 @@ void WCLI::executeCommand(const CommandInput& input)
     }
     catch (string notSupported)
     {
-        cout << "No command " << notSupported << " found" << endl;
+        cout << "'" << notSupported << "'"
+            << "is not recognised as an internal command"
+            << endl;
     }
 }

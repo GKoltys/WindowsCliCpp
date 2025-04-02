@@ -6,7 +6,7 @@
 class Cls : public StdCommand
 {
 public:
-    void execute(CLIContext ctx);
+    void execute(CliContext ctx);
 
 protected:
     std::string getName();

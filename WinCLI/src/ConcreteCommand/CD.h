@@ -6,7 +6,7 @@
 class Cd : public DirectoryCommand
 {
 public:
-    void execute(CLIContext ctx);
+    void execute(CliContext ctx);
 
 protected:
     std::string getName();

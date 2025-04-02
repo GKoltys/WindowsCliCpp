@@ -8,7 +8,7 @@ class Echo : public OutputCommand
 public:
     Echo(const std::vector<std::string>& args);
 
-    void execute(CLIContext& ctx) override;
+    void execute(CliContext& ctx) override;
 
 protected:
     std::string getName() const override;

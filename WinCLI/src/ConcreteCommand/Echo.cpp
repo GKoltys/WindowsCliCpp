@@ -5,11 +5,11 @@
 
 using namespace std;
 
-Echo::Echo(const std::vector<std::string>& args) :
+Echo::Echo(const vector<string>& args) :
     OutputCommand(args)
 {}
 
-void Echo::execute(CLIContext& ctx)
+void Echo::execute(CliContext& ctx)
 {
     for (int i = 1; i < getArgs().size(); i++)
     {

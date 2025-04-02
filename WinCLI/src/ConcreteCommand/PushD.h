@@ -6,7 +6,7 @@
 class Pushd : DirectoryCommand
 {
 public:
-    void execute(CLIContext ctx);
+    void execute(CliContext ctx);
 
 protected:
     std::string getName();
