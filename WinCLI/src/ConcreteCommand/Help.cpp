@@ -10,6 +10,7 @@ Help::Help(const vector<string>& args) : OutputCommand(args)
     initialiseHelpMap();
 }
 
+// update this to unordered_map<string, vector<string>>
 void Help::initialiseHelpMap()
 {
     _helpTexts["cd"] = "Changes the current directory to [path].";

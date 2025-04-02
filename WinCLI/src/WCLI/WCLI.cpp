@@ -50,7 +50,8 @@ void WCLI::executeCommand(const CommandInput& input)
         }
         else if (commandInput == "dir")
         {
-            ;
+            Dir toExecute(input.getArgs());
+            toExecute.execute(_context);
         }
         else if (commandInput == "echo")
         {
