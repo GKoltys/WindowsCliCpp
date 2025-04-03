@@ -13,16 +13,18 @@ public:
 
     void changeDir(std::filesystem::path newDir);
     void changeExitState();
+    void cliStackPush(std::filesystem::path pathIn);
+    void cliStackPop();
 
     std::string getCurrentDirStr() const;
     std::filesystem::path getCurrentDir() const;
-    std::stack<std::string> getStack() const;
+    std::stack<std::filesystem::path> getStack() const;
     bool getExitState() const;
 
 private:
     std::string _currentDirStr;
     std::filesystem::path _currentDir;
-    std::stack<std::string> _dirStack;
+    std::stack<std::filesystem::path> _dirStack;
     bool _exitState;
 };
 

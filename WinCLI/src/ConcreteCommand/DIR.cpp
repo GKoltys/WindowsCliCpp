@@ -4,7 +4,7 @@
 #include "../WCLI/Utils.h"
 
 using namespace std;
-namespace fs = std::filesystem;
+using namespace filesystem;
 
 Dir::Dir(const vector<string>& args) : DirectoryCommand(args) {}
 
@@ -19,10 +19,12 @@ void Dir::execute(CliContext& ctx)
     }
     if (args.size() == 2)
     {
-        if (Utils::verifyPath(args[1]))
+        path userPath = args[1];
+
+        if (Utils::verifyPath(userPath))
         {
-            cout << "\nDirectory of " << args[1] << "\n" << endl;
-            for (const auto& entry : fs::directory_iterator(args[1]))
+            cout << "\nDirectory of " << userPath << "\n" << endl;
+            for (const auto& entry : directory_iterator(userPath))
             {
                 cout << "\t" << entry.path().filename().string() << endl;
             }
@@ -37,7 +39,7 @@ void Dir::execute(CliContext& ctx)
     {
         string currentDir = ctx.getCurrentDirStr();
         cout << "\nDirectory of " << currentDir << "\n" << endl;
-        for (const auto& entry : fs::directory_iterator(currentDir))
+        for (const auto& entry : directory_iterator(currentDir))
         {
             cout << "\t" << entry.path().filename().string() << endl;
         }

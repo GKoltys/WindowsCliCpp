@@ -66,11 +66,13 @@ void WCLI::executeCommand(const CommandInput& input)
         }
         else if (commandInput == "popd")
         {
-
+            Popd toExecute(input.getArgs());
+            toExecute.execute(_context);
         }
         else if (commandInput == "pushd")
         {
-
+            Pushd toExecute(input.getArgs());
+            toExecute.execute(_context);
         }
         else if (commandInput == "exit")
         {

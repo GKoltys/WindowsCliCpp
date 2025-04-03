@@ -9,7 +9,7 @@ using namespace filesystem;
 CliContext::CliContext() : 
     _currentDirStr(currentPath().string()),
     _currentDir(currentPath()),
-    _dirStack(stack<string>()),
+    _dirStack(stack<path>()),
     _exitState(false) {}
 
 CliContext::~CliContext() {}
@@ -28,6 +28,16 @@ void CliContext::changeExitState()
     _exitState = !_exitState;
 }
 
+void CliContext::cliStackPush(path pathIn)
+{
+    _dirStack.push(pathIn);
+}
+
+void CliContext::cliStackPop()
+{
+    _dirStack.pop();
+}
+
 bool CliContext::getExitState() const
 {
     return _exitState;
@@ -43,7 +53,7 @@ std::filesystem::path CliContext::getCurrentDir() const
     return _currentDir;
 }
 
-stack<string> CliContext::getStack() const
+stack<path> CliContext::getStack() const
 {
     return _dirStack;
 }

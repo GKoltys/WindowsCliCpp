@@ -6,6 +6,8 @@
 class Pushd : DirectoryCommand
 {
 public:
+    Pushd(const std::vector<std::string>& args);
+
     void execute(CliContext& ctx) override;
 
 protected:

@@ -17,7 +17,7 @@ void Cd::execute(CliContext& ctx)
         cout << "Usage: cd [path]" << endl << endl;
         return;
     }
-    
+
     if (args.size() == 2)
     {
         path userPath = args[1];
