@@ -24,7 +24,7 @@ void WCLI::run()
     {
         string cmdIn;
 
-        cout << _context.getCurrentDir() << ">";
+        cout << _context.getCurrentDirStr() << ">";
         getline(cin, cmdIn);
 
         if (cmdIn == "")
@@ -46,7 +46,8 @@ void WCLI::executeCommand(const CommandInput& input)
     {
         if (commandInput == "cd")
         {
-            ;
+            Cd toExecute(input.getArgs());
+            toExecute.execute(_context);
         }
         else if (commandInput == "dir")
         {

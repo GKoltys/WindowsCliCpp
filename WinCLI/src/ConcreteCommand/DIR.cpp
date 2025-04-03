@@ -14,7 +14,7 @@ void Dir::execute(CliContext& ctx)
 
     if (args.size() > 2)
     {
-        std::cout << "Usage: dir [path]\n";
+        cout << "Usage: dir [path]\n" << endl;
         return;
     }
     if (args.size() == 2)
@@ -35,7 +35,7 @@ void Dir::execute(CliContext& ctx)
     }
     else
     {
-        string currentDir = ctx.getCurrentDir();
+        string currentDir = ctx.getCurrentDirStr();
         cout << "\nDirectory of " << currentDir << "\n" << endl;
         for (const auto& entry : fs::directory_iterator(currentDir))
         {

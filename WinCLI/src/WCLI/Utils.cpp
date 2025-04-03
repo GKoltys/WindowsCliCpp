@@ -7,9 +7,9 @@
 
 using namespace std;
 
-string Utils::currentPath()
+filesystem::path Utils::currentPath()
 {
-    return filesystem::current_path().string();
+    return filesystem::current_path();
 }
 
 vector<string> Utils::parse(string cmdIn)
@@ -37,7 +37,7 @@ string Utils::getDateTime()
     return oss.str();
 }
 
-bool Utils::verifyPath(const string& path)
+bool Utils::verifyPath(const filesystem::path& path)
 {
     return filesystem::exists(path) && filesystem::is_directory(path);
 }

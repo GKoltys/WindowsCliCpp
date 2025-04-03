@@ -6,6 +6,8 @@
 class Cd : public DirectoryCommand
 {
 public:
+    Cd(const std::vector<std::string>& args);
+
     void execute(CliContext& ctx) override;
 
 protected:

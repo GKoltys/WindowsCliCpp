@@ -29,7 +29,7 @@ void Help::execute(CliContext& ctx)
 
     if (args.size() > 2)
     {
-        std::cout << "Usage: help [command-name]\n";
+        cout << "Usage: help [command-name]\n" << endl;
         return;
     }
     if (args.size() == 2)
