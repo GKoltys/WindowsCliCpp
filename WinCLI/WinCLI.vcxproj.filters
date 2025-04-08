@@ -25,6 +25,12 @@
     <Filter Include="Concrete Command Header Files">
       <UniqueIdentifier>{8454df92-456a-487f-98d8-a62405d70639}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{fcad4ad4-23b4-4cb3-93a1-eafb2cad6727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{b3839fea-6e23-4131-908b-6ddf19676c60}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\WCLI\CliContext.h">
@@ -80,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="src\WCLI\CommandInput.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Libs\json.hpp">
+      <Filter>libs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,5 +146,10 @@
     <ClCompile Include="src\WCLI\CommandInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Config\config.json">
+      <Filter>Config</Filter>
+    </None>
   </ItemGroup>
 </Project>

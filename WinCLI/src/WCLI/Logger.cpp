@@ -10,22 +10,24 @@
 using namespace std;
 
 // Initialises static file var
-ofstream Logger::logFile;
+ofstream Logger::_logFile;
 
 // Ensures only one file is open at a time
-bool Logger::fileReady = false;
+bool Logger::_fileReady = false;
+
+bool Logger::_debugMode = false;
 
 // Opens log file on users command
 void Logger::init(const std::string& filename)
 {
     // Makes sure no files are already open
-    if (!fileReady)
+    if (!_fileReady)
     {
-        logFile.open(filename, ios::trunc);
-        fileReady = true;
-        if (!logFile.is_open())
+        _logFile.open(filename, ios::trunc);
+        _fileReady = true;
+        if (!_logFile.is_open())
         {
-            fileReady = false;
+            _fileReady = false;
             cerr << "Error: Could not open log file: " << filename << endl;
         }
     }
@@ -39,12 +41,12 @@ void Logger::init(const std::string& filename)
 void Logger::close()
 {
     // Makes sure there is an open file
-    if (fileReady)
+    if (_fileReady)
     {
-        if (logFile.is_open())
+        if (_logFile.is_open())
         {
-            logFile.close();
-            fileReady = false;
+            _logFile.close();
+            _fileReady = false;
         }
     }
     else
@@ -53,16 +55,34 @@ void Logger::close()
     }
 }
 
+void Logger::setDebugMode(const bool debugMode)
+{
+    _debugMode = debugMode;
+}
+
+bool Logger::getDebugMode()
+{
+    return _debugMode;
+}
+
+bool Logger::getFileState()
+{
+    return _fileReady;
+}
+
 // Standard log with only message
 void Logger::log(const std::string& message)
 {
     string logEntry = Utils::getDateTime() + " " + message + "\n";
 
-    cout << logEntry << endl;
-
-    if (fileReady)
+    if (_debugMode)
     {
-        logFile << logEntry << endl;
+        cout << logEntry << endl;
+    }
+
+    if (_fileReady)
+    {
+        _logFile << logEntry << endl;
     }
 }
 
@@ -71,11 +91,14 @@ void Logger::log(const std::string& message, const string& level)
 {
     string logEntry = Utils::getDateTime() + " [" + level + "] " + message + "\n";
 
-    cout << logEntry << endl;
-
-    if (fileReady)
+    if (_debugMode)
     {
-        logFile << logEntry;
+        cout << logEntry << endl;
+    }
+
+    if (_fileReady)
+    {
+        _logFile << logEntry;
     }
 }
 
@@ -84,11 +107,14 @@ void Logger::startTestCase(const std::string& message)
 {
     string logEntry = "\n---- " + message + " ----\n";
 
-    cout << logEntry << endl;
-
-    if (fileReady)
+    if (_debugMode)
     {
-        logFile << logEntry;
+        cout << logEntry << endl;
+    }
+
+    if (_fileReady)
+    {
+        _logFile << logEntry;
     }
 }
 
@@ -97,10 +123,13 @@ void Logger::startTestCase(const int testID, const std::string& message)
 {
     string logEntry = "\n---- Test Case " + to_string(testID) + ": " + message + " ----" + "\n";
 
-    cout << logEntry << endl;
-
-    if (fileReady)
+    if (_debugMode)
     {
-        logFile << logEntry;
+        cout << logEntry << endl;
+    }
+
+    if (_fileReady)
+    {
+        _logFile << logEntry;
     }
 }

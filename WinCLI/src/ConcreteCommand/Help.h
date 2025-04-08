@@ -2,6 +2,8 @@
 #define HELP_H
 
 #include <unordered_map>
+#include <string>
+#include <vector>
 #include "../Command/OutputCommand.h"
 
 class Help : public OutputCommand
@@ -15,7 +17,7 @@ protected:
     std::string getName() const override;
 
 private:
-    std::unordered_map<std::string, std::string> _helpTexts;
+    std::unordered_map<std::string, std::vector<std::string>> _helpTexts;
     void initialiseHelpMap();
 };
 

@@ -10,17 +10,18 @@ Help::Help(const vector<string>& args) : OutputCommand(args)
     initialiseHelpMap();
 }
 
-// update this to unordered_map<string, vector<string>>
+// Structure unordered_map<key (string): Command Name,
+// Value (vector<string>): {Command Syntax, Command Description}>
 void Help::initialiseHelpMap()
 {
-    _helpTexts["cd"] = "Changes the current directory to [path].";
-    _helpTexts["dir"] = "Lists contents of the current directory.";
-    _helpTexts["echo"] = "Prints the given text to the screen.";
-    _helpTexts["exit"] = "Exits the command line interpreter.";
-    _helpTexts["help"] = "Shows help for supported commands.";
-    _helpTexts["pushd"] = "Stores the current directory for use by the popd command, then\n\t\tchanges to the specified directory.";
-    _helpTexts["popd"] = "Changes to the directory stored by the pushd command.";
-    _helpTexts["cls"] = "Clears the screen.";
+    _helpTexts["cd"] = { "cd [path]", "Changes the current directory to [path]."};
+    _helpTexts["dir"] = { "dir [path]", "Lists contents of the current directory." };
+    _helpTexts["echo"] = { "echo [message]", "Prints the given text to the screen." };
+    _helpTexts["exit"] = { "exit", "Exits the command line interpreter." };
+    _helpTexts["help"] = { "help [command]", "Shows help for supported commands." };
+    _helpTexts["pushd"] = { "pushd [path | ..]", "Stores the current directory for use by the popd command, then\n\t\tchanges to the specified directory." };
+    _helpTexts["popd"] = { "popd", "Changes to the directory stored by the pushd command." };
+    _helpTexts["cls"] = { "cls", "Clears the screen." };
 }
 
 void Help::execute(CliContext& ctx)
@@ -37,11 +38,11 @@ void Help::execute(CliContext& ctx)
         if (_helpTexts.count(args[1]))
         {
             auto cmd = _helpTexts.find(args[1]);
-            cout << cmd->second << "\n\n" << cmd->first << "\n" << endl;
+            cout << cmd->second[1] << "\n\n" << cmd->second[0] << "\n" << endl;
         }
         else
         {
-            cout << "This command is not supported by the help utility\n";
+            cout << "This command is not supported by the help utility" << endl << endl;
         }
     }
     else
@@ -49,7 +50,7 @@ void Help::execute(CliContext& ctx)
         cout << "For more information on a specific command, type help [command-name]\n" << endl;
         for (const auto& cmd : _helpTexts)
         {
-            cout << cmd.first << "\t\t" << cmd.second << endl;
+            cout << cmd.first << "\t\t" << cmd.second[1] << endl;
         }
         cout << endl;
     }

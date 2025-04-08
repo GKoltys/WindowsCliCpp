@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include <string>
 #include "WCLI.h"
 #include "Utils.h"
@@ -13,13 +14,35 @@
 
 using namespace std;
 
-WCLI::WCLI() : _context(CliContext()), _logger(Logger())
+WCLI::WCLI() : _context(CliContext()), _logger(Logger()), _config(Config()) {}
+
+void WCLI::applyConfig()
 {
-   //_config = Config();
+    _logger.setDebugMode(_config.isLog());
+
+    string themeCommand = "color " + _config.getBackgroundColour() + _config.getTextColour();
+    system(themeCommand.c_str());
+    
+    if (_config.isLogFile())
+    {
+        _logger.init(_config.getLogFilename());
+    }
+
+    _logger.log("Applying config");
+}
+
+void WCLI::run(const string& path)
+{
+    _config.loadFromJson(path);
+    run();
 }
 
 void WCLI::run()
 {
+    applyConfig();
+
+    _logger.log("Shell started");
+
     while (!_context.getExitState())
     {
         string cmdIn;
@@ -35,6 +58,11 @@ void WCLI::run()
         CommandInput command(cmdIn);
 
         executeCommand(command);
+    }
+
+    if (_logger.getFileState())
+    {
+        _logger.close();
     }
 }
 

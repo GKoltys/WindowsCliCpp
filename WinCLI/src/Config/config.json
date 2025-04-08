@@ -1,0 +1,11 @@
+{
+    "logging": {
+        "consoleLog": false,
+        "fileLog": true,
+        "filename": "WCLILogger.txt"
+    },
+    "theme": {
+        "backgroundColour": "0",
+        "textColour": "F"
+    }  
+}
