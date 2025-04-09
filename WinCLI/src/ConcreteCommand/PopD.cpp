@@ -2,6 +2,7 @@
 #include <filesystem>
 #include "../WCLI/Utils.h"
 #include "Popd.h"
+#include "../WCLI/CliContext.h"
 #include "Cd.h"
 
 using namespace std;

@@ -1,4 +1,5 @@
 #include <string>
+#include "Command.h"
 #include "DirectoryCommand.h"
 
 using namespace std;

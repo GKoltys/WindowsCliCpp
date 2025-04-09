@@ -1,6 +1,7 @@
 #include <iostream>
 #include <filesystem>
 #include "Cd.h"
+#include "../WCLI/CliContext.h"
 #include "../WCLI/Utils.h"
 
 using namespace std;

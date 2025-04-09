@@ -1,5 +1,6 @@
 #include <string>
 #include "Exit.h"
+#include "../WCLI/CliContext.h"
 
 using namespace std;
 

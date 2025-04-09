@@ -3,6 +3,7 @@
 #include <string>
 #include "WCLI.h"
 #include "Utils.h"
+#include "CommandInput.h"
 #include "../ConcreteCommand/Cd.h"
 #include "../ConcreteCommand/Cls.h"
 #include "../ConcreteCommand/Dir.h"

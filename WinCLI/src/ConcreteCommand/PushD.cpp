@@ -1,6 +1,7 @@
 #include <iostream>
 #include <filesystem>
 #include "../WCLI/Utils.h"
+#include "../WCLI/CliContext.h"
 #include "Pushd.h"
 #include "Cd.h"
 

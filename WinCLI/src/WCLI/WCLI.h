@@ -2,10 +2,11 @@
 #define WCLI_H
 
 #include <string>
-#include "CLIContext.h"
-#include "Logger.h"
+#include "CliContext.h"
 #include "Config.h"
-#include "CommandInput.h"
+#include "Logger.h"
+
+class CommandInput;
 
 class WCLI
 {

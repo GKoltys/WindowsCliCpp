@@ -2,7 +2,8 @@
 #define COMMAND_H
 
 #include <string>
-#include "../WCLI/WCLI.h"
+
+class CliContext;
 
 class Command
 {
