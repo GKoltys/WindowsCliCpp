@@ -5,7 +5,7 @@
         "filename": "WCLILogger.txt"
     },
     "theme": {
-        "backgroundColour": "0",
-        "textColour": "F"
+        "backgroundColour": "B",
+        "textColour": "0"
     }  
 }

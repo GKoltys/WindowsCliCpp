@@ -32,7 +32,7 @@ void WCLI::applyConfig()
     _logger.log("Applying config");
 }
 
-void WCLI::run(const string& path)
+void WCLI::runWithConfigFile(const string& path)
 {
     _config.loadFromJson(path);
     run();

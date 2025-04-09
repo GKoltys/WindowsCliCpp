@@ -3,5 +3,9 @@
 int main()
 {
     WCLI cmd = WCLI();
-    cmd.run("C:/Users/gkoltys/Documents/siriusXM-Internship/c++Learning/github/WindowsCLIcpp/WinCLI/src/Config/config.json");
+
+    // Use either to start the CLI
+
+    //cmd.run();
+    cmd.runWithConfigFile("C:/Users/gkoltys/Documents/siriusXM-Internship/c++Learning/github/WindowsCLIcpp/WinCLI/src/Config/config.json");
 }

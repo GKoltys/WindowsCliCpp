@@ -14,7 +14,7 @@ public:
     WCLI();
     void applyConfig();
     void run();
-    void run(const std::string& path);
+    void runWithConfigFile(const std::string& path);
     void executeCommand(const CommandInput& input);
 
 private:
