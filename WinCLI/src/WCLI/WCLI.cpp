@@ -51,14 +51,11 @@ void WCLI::run()
         cout << _context.getCurrentDirStr() << ">";
         getline(cin, cmdIn);
 
-        if (cmdIn == "")
+        if (cmdIn != "")
         {
-            continue;
+            CommandInput command(cmdIn);
+            executeCommand(command);
         }
-
-        CommandInput command(cmdIn);
-
-        executeCommand(command);
     }
 
     if (_logger.getFileState())
