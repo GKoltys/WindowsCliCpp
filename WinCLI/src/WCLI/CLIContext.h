@@ -16,10 +16,10 @@ public:
     void cliStackPush(std::filesystem::path pathIn);
     void cliStackPop();
 
-    std::string getCurrentDirStr() const { return _currentDirStr; };
-    std::filesystem::path getCurrentDir() const;
-    std::stack<std::filesystem::path> getStack() const;
-    bool getExitState() const;
+    std::string getCurrentDirStr() const { return _currentDirStr; }
+    std::filesystem::path getCurrentDir() const { return _currentDir; }
+    std::stack<std::filesystem::path> getStack() const { return _dirStack; }
+    bool getExitState() const { return _exitState; }
 
 private:
     std::string _currentDirStr;
