@@ -7,8 +7,7 @@
 class CommandInput
 {
 public:
-    CommandInput(std::string rawIn);
-
+    CommandInput(std::string rawIn, std::vector<std::string> parsed);
     std::string getRawCmd() const;
     std::vector<std::string> getArgs() const;
     int getArgCount() const;

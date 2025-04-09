@@ -53,7 +53,7 @@ void WCLI::run()
 
         if (cmdIn != "")
         {
-            CommandInput command(cmdIn);
+            CommandInput command(cmdIn, Utils::parse(cmdIn));
             executeCommand(command);
         }
     }

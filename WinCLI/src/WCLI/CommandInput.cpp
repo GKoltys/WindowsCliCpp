@@ -5,9 +5,9 @@
 
 using namespace std;
 
-CommandInput::CommandInput(string rawIn) :
+CommandInput::CommandInput(std::string rawIn, std::vector<std::string> parsed) :
     _rawCommand(rawIn),
-    _parsed(Utils::parse(rawIn))
+    _parsed(parsed) 
 {}
 
 string CommandInput::getRawCmd() const
