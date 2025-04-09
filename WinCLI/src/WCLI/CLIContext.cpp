@@ -37,25 +37,3 @@ void CliContext::cliStackPop()
 {
     _dirStack.pop();
 }
-
-bool CliContext::getExitState() const
-{
-    return _exitState;
-}
-
-string CliContext::getCurrentDirStr() const
-{
-    return _currentDirStr;
-}
-
-std::filesystem::path CliContext::getCurrentDir() const
-{
-    return _currentDir;
-}
-
-stack<path> CliContext::getStack() const
-{
-    return _dirStack;
-}
-
-
