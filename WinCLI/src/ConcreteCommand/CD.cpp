@@ -7,12 +7,8 @@
 using namespace std;
 using namespace filesystem;
 
-Cd::Cd(const vector<string>& args) : DirectoryCommand(args) {}
-
-void Cd::execute(CliContext& ctx)
+void Cd::execute(CliContext& ctx, const vector<string>& args)
 {
-    const vector<string>& args = getArgs();
-
     if (args.size() > 2)
     {
         cout << "Usage: cd [path]" << endl << endl;

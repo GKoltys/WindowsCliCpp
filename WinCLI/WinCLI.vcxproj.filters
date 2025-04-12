@@ -90,6 +90,9 @@
     <ClInclude Include="src\Libs\json.hpp">
       <Filter>libs</Filter>
     </ClInclude>
+    <ClInclude Include="src\WCLI\CommandManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\WCLI\CliContext.cpp">
@@ -144,6 +147,9 @@
       <Filter>Concrete Command Files</Filter>
     </ClCompile>
     <ClCompile Include="src\WCLI\CommandInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\CommandManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

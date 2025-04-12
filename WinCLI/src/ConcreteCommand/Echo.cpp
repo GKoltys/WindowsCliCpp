@@ -5,15 +5,13 @@
 
 using namespace std;
 
-Echo::Echo(const vector<string>& args) :
-    OutputCommand(args)
-{}
+Echo::Echo() {}
 
-void Echo::execute(CliContext& ctx)
+void Echo::execute(CliContext& ctx, const vector<string>& args)
 {
-    for (int i = 1; i < getArgs().size(); i++)
+    for (int i = 1; i < args.size(); i++)
     {
-        cout << getArgs()[i] << " ";
+        cout << args[i] << " ";
     }
     cout << endl;
 }

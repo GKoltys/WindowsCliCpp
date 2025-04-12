@@ -7,12 +7,8 @@
 using namespace std;
 using namespace filesystem;
 
-Dir::Dir(const vector<string>& args) : DirectoryCommand(args) {}
-
-void Dir::execute(CliContext& ctx)
+void Dir::execute(CliContext& ctx, const vector<string>& args)
 {
-    vector<string> args = getArgs();
-
     if (args.size() > 2)
     {
         cout << "Usage: dir [path]\n" << endl;

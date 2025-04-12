@@ -5,18 +5,16 @@
 #include <vector>
 #include "Command.h"
 
+// Continue this format
+
 class DirectoryCommand : public Command
 {
 public:
-    DirectoryCommand(std::vector<std::string> args);
+    DirectoryCommand();
     ~DirectoryCommand();
 
 protected:
     std::string getPrefix() const override;
-    std::vector<std::string> getArgs() const;
-
-private:
-    std::vector<std::string> _args;
 };
 
 #endif

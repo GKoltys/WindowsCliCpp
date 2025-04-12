@@ -1,6 +1,5 @@
 #include <iostream>
 #include <filesystem>
-#include "../WCLI/Utils.h"
 #include "Popd.h"
 #include "../WCLI/CliContext.h"
 #include "Cd.h"
@@ -8,12 +7,10 @@
 using namespace std;
 using namespace filesystem;
 
-Popd::Popd(const vector<string>& args) : DirectoryCommand(args) {}
+Popd::Popd(Cd* cdHelper) : _cdHelper(cdHelper) {}
 
-void Popd::execute(CliContext& ctx)
+void Popd::execute(CliContext& ctx, const vector<string>& args)
 {
-    vector<string> args = getArgs();
-
     if (args.size() > 1)
     {
         cout << "Usage: popd" << endl << endl;
@@ -26,9 +23,8 @@ void Popd::execute(CliContext& ctx)
         return;
     }
 
-    args.push_back(ctx.getStack().top().string());
-    Cd cd(args);
-    cd.execute(ctx);
+    vector<string> prevDir = { args[0], (ctx.getStack().top().string())};
+    _cdHelper->execute(ctx, args);
 
     ctx.cliStackPop();
 }

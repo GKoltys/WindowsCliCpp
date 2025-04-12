@@ -3,15 +3,20 @@
 
 #include "../Command/DirectoryCommand.h"
 
+class Cd;
+
 class Pushd : DirectoryCommand
 {
 public:
-    Pushd(const std::vector<std::string>& args);
+    Pushd(Cd* cdHelper);
 
-    void execute(CliContext& ctx) override;
+    void execute(CliContext& ctx, const std::vector<std::string>& args) override;
 
 protected:
     std::string getName() const override;
+
+private:
+    Cd* _cdHelper;
 };
 
 #endif

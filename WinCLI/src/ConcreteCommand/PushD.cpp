@@ -8,12 +8,10 @@
 using namespace std;
 using namespace filesystem;
 
-Pushd::Pushd(const vector<string>& args) : DirectoryCommand(args) {}
+Pushd::Pushd(Cd* cdHelper) : _cdHelper(cdHelper) {}
 
-void Pushd::execute(CliContext& ctx)
+void Pushd::execute(CliContext& ctx, const vector<string>& args)
 {
-    vector<string> args = getArgs();
-
     if (args.size() > 2)
     {
         cout << "Usage: pushd [path]" << endl << endl;
@@ -27,8 +25,7 @@ void Pushd::execute(CliContext& ctx)
         if (Utils::verifyPath(userPath))
         {
             ctx.cliStackPush(ctx.getCurrentDir());
-            Cd cd(args);
-            cd.execute(ctx);
+            _cdHelper->execute(ctx, args);
         }
         else
         {

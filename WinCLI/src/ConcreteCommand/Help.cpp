@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Help::Help(const vector<string>& args) : OutputCommand(args)
+Help::Help()
 {
     initialiseHelpMap();
 }
@@ -18,16 +18,14 @@ void Help::initialiseHelpMap()
     _helpTexts["dir"] = { "dir [path]", "Lists contents of the current directory." };
     _helpTexts["echo"] = { "echo [message]", "Prints the given text to the screen." };
     _helpTexts["exit"] = { "exit", "Exits the command line interpreter." };
-    _helpTexts["help"] = { "help [command]", "Shows help for supported commands." };
+    _helpTexts["help"] = { "help [command-name]", "Shows help for supported commands." };
     _helpTexts["pushd"] = { "pushd [path | ..]", "Stores the current directory for use by the popd command, then\n\t\tchanges to the specified directory." };
     _helpTexts["popd"] = { "popd", "Changes to the directory stored by the pushd command." };
     _helpTexts["cls"] = { "cls", "Clears the screen." };
 }
 
-void Help::execute(CliContext& ctx)
+void Help::execute(CliContext& ctx, const vector<string>& args)
 {
-    vector<string> args = getArgs();
-
     if (args.size() > 2)
     {
         cout << "Usage: help [command-name]\n" << endl;

@@ -4,7 +4,7 @@
 #include <string>
 #include "CliContext.h"
 #include "Config.h"
-#include "Logger.h"
+#include "CommandManager.h"
 
 class CommandInput;
 
@@ -15,12 +15,11 @@ public:
     void applyConfig();
     void run();
     void runWithConfigFile(const std::string& path);
-    void executeCommand(const CommandInput& input);
 
 private:
     CliContext _context;
-    Logger _logger;
     Config _config;
+    CommandManager _cmdManager;
 };
 
 #endif

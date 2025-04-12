@@ -9,9 +9,9 @@
 class Help : public OutputCommand
 {
 public:
-    Help(const std::vector<std::string>& args);
+    Help();
 
-    void execute(CliContext& ctx) override;
+    void execute(CliContext& ctx, const std::vector<std::string>& args) override;
 
 protected:
     std::string getName() const override;
