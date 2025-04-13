@@ -7,7 +7,7 @@
 using namespace std;
 using namespace filesystem;
 
-Popd::Popd(Cd* cdHelper) : _cdHelper(cdHelper) {}
+Popd::Popd(Command* cdHelper) : _cdHelper(cdHelper) {}
 
 void Popd::execute(CliContext& ctx, const vector<string>& args)
 {

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstring>
-#include <string>
 #include "Logger.h"
 #include "WCLI.h"
 #include "Utils.h"
@@ -39,15 +38,22 @@ void WCLI::run()
 
     while (!_context.getExitState())
     {
-        string cmdIn;
-
-        cout << _context.getCurrentDirStr() << ">";
-        getline(cin, cmdIn);
-
-        if (cmdIn != "")
+        try
         {
-            CommandInput command(cmdIn, Utils::parse(cmdIn));
-            _cmdManager.executeCommand(_context, command.getArgs());
+            string cmdIn;
+
+            cout << _context.getCurrentDirStr() << ">";
+            getline(cin, cmdIn);
+
+            if (cmdIn != "")
+            {
+                CommandInput command(cmdIn, Utils::parse(cmdIn));
+                _cmdManager.executeCommand(_context, command.getArgs());
+            }
+        }
+        catch (const exception& e)
+        {
+            Logger::log(e.what(), "[ERROR]");
         }
     }
 

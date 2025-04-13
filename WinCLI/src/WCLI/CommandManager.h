@@ -1,14 +1,12 @@
 #ifndef COMMAND_MANAGER_H
 #define COMMAND_MANAGER_H
 
-class Cd;
-class Cls;
-class Dir;
-class Echo;
-class Exit;
-class Help;
-class Popd;
-class Pushd;
+#include <unordered_map>
+#include <string>
+#include <vector>
+
+class Command;
+class CliContext;
 
 class CommandManager
 {
@@ -19,14 +17,7 @@ public:
     void executeCommand(CliContext& ctx, const std::vector<std::string>& args);
 
 private:
-    Cd* _cd;
-    Cls* _cls;
-    Dir* _dir;
-    Echo* _echo;
-    Exit* _exit;
-    Help* _help;
-    Popd* _popd;
-    Pushd* _pushd;
+    std::unordered_map<std::string, Command*> _commands;
 };
 
 #endif

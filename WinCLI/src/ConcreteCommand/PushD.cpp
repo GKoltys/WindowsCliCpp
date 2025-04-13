@@ -8,7 +8,7 @@
 using namespace std;
 using namespace filesystem;
 
-Pushd::Pushd(Cd* cdHelper) : _cdHelper(cdHelper) {}
+Pushd::Pushd(Command* cdHelper) : _cdHelper(cdHelper) {}
 
 void Pushd::execute(CliContext& ctx, const vector<string>& args)
 {
