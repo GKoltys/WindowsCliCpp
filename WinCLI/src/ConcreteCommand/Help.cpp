@@ -1,6 +1,4 @@
 #include <iostream>
-#include <string>
-#include <vector>
 #include "Help.h"
 
 using namespace std;
@@ -52,9 +50,4 @@ void Help::execute(CliContext& ctx, const vector<string>& args)
         }
         cout << endl;
     }
-}
-
-string Help::getName() const
-{
-    return "help";
 }

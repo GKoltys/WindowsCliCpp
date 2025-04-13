@@ -58,8 +58,3 @@ void Cd::execute(CliContext& ctx, const vector<string>& args)
         cout << ctx.getCurrentDirStr() << endl << endl;
     }
 }
-
-string Cd::getName() const
-{
-    return "cd";
-}

@@ -1,18 +1,16 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include <string>
-
 class Config
 {
 public:
     void loadFromJson(const std::string& path);
 
-    bool isLog() const;
-    bool isLogFile() const;
-    std::string getBackgroundColour() const;
-    std::string getTextColour() const;
-    std::string getLogFilename() const;
+    bool isLog() const { return _logToConsole; }
+    bool isLogFile() const { return _logToFile; }
+    std::string getBackgroundColour() const { return _backgroundColour; }
+    std::string getTextColour() const { return _textColour; }
+    std::string getLogFilename() const { return _logFilename; }
 
 private:
     bool _logToConsole = false;

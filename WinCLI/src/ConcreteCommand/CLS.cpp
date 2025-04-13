@@ -1,4 +1,3 @@
-#include <string>
 #include "Cls.h"
 
 using namespace std;
@@ -10,9 +9,4 @@ void Cls::execute(CliContext& ctx, const std::vector<std::string>& args)
     printf(
         "\033[2J"      // clear the screen
         "\033[1;1H");  // move cursor home
-}
-
-string Cls::getName() const
-{
-    return "cls";
 }

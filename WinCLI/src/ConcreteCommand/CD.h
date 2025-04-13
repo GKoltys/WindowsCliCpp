@@ -9,7 +9,7 @@ public:
     void execute(CliContext& ctx, const std::vector<std::string>& args) override;
 
 protected:
-    std::string getName() const override;
+    std::string getName() const override { return "cd"; }
 };
 
 #endif

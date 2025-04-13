@@ -12,8 +12,6 @@ CliContext::CliContext() :
     _dirStack(stack<path>()),
     _exitState(false) {}
 
-CliContext::~CliContext() {}
-
 void CliContext::changeDir(path newDir)
 {
     if (Utils::verifyPath(newDir))

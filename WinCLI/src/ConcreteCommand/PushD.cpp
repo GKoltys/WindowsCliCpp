@@ -37,8 +37,3 @@ void Pushd::execute(CliContext& ctx, const vector<string>& args)
         cout << endl;
     }
 }
-
-string Pushd::getName() const
-{
-    return "push";
-}

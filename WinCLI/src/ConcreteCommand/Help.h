@@ -2,8 +2,6 @@
 #define HELP_H
 
 #include <unordered_map>
-#include <string>
-#include <vector>
 #include "../Command/OutputCommand.h"
 
 class Help : public OutputCommand
@@ -14,7 +12,7 @@ public:
     void execute(CliContext& ctx, const std::vector<std::string>& args) override;
 
 protected:
-    std::string getName() const override;
+    std::string getName() const override { return "help"; }
 
 private:
     std::unordered_map<std::string, std::vector<std::string>> _helpTexts;

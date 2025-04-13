@@ -1,20 +1,15 @@
 #ifndef DIRECTORY_COMMAND_H
 #define DIRECTORY_COMMAND_H
 
-#include <string>
-#include <vector>
 #include "Command.h"
-
-// Continue this format
 
 class DirectoryCommand : public Command
 {
 public:
-    DirectoryCommand();
-    ~DirectoryCommand();
+    virtual ~DirectoryCommand() = default;
 
 protected:
-    std::string getPrefix() const override;
+    std::string getPrefix() const override { return "dir_"; }
 };
 
 #endif

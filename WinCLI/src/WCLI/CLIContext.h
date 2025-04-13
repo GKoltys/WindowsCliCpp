@@ -9,7 +9,6 @@ class CliContext
 {
 public:
     CliContext();
-    ~CliContext();
 
     void changeDir(std::filesystem::path newDir);
     void changeExitState();

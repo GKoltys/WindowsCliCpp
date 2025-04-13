@@ -28,8 +28,3 @@ void Popd::execute(CliContext& ctx, const vector<string>& args)
 
     ctx.cliStackPop();
 }
-
-string Popd::getName() const
-{
-    return "popd";
-}

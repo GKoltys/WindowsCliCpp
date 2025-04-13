@@ -8,8 +8,9 @@ class CommandInput
 {
 public:
     CommandInput(std::string rawIn, std::vector<std::string> parsed);
-    std::string getRawCmd() const;
-    std::vector<std::string> getArgs() const;
+    
+    std::string getRawCmd() const { return _rawCommand; }
+    std::vector<std::string> getArgs() const { return _parsed; }
     int getArgCount() const;
 
 private: 

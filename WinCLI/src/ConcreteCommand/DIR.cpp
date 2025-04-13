@@ -43,8 +43,3 @@ void Dir::execute(CliContext& ctx, const vector<string>& args)
         cout << endl;
     }
 }
-
-string Dir::getName() const
-{
-    return "dir";
-}

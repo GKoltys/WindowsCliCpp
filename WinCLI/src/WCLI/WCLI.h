@@ -6,8 +6,6 @@
 #include "Config.h"
 #include "CommandManager.h"
 
-class CommandInput;
-
 class WCLI
 {
 public:

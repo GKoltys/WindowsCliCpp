@@ -18,7 +18,8 @@ vector<string> Utils::parse(string cmdIn)
     string separate;
     std::istringstream stream(cmdIn);
 
-    while (getline(stream, separate, ' ')) {
+    while (getline(stream, separate, ' '))
+    {
         parsed.push_back(separate);
     }
 

@@ -34,28 +34,3 @@ void Config::loadFromJson(const string& path)
         _textColour = theme.value("textColour", "F");
     }
 }
-
-bool Config::isLog() const
-{
-    return _logToConsole;
-}
-
-bool Config::isLogFile() const
-{
-    return _logToFile;
-}
-
-string Config::getBackgroundColour() const
-{
-    return _backgroundColour;
-}
-
-std::string Config::getTextColour() const
-{
-    return _textColour;
-}
-
-std::string Config::getLogFilename() const
-{
-    return _logFilename;
-}
