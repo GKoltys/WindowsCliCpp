@@ -22,7 +22,7 @@ void WCLI::applyConfig()
         Logger::init(_config.getLogFilename());
     }
 
-    Logger::log("Applying config");
+    Logger::log("Config applied");
 }
 
 void WCLI::runWithConfigFile(const string& path)

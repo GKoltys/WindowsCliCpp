@@ -25,7 +25,6 @@ void Pushd::execute(CliContext& ctx, const vector<string>& args)
         if (Utils::verifyPath(userPath))
         {
             ctx.cliStackPush(ctx.getCurrentDir());
-            cout << "Current dir to leave: " << ctx.getCurrentDir() << endl;
             _cdHelper->execute(ctx, args);
         }
         else
