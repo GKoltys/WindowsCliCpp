@@ -12,7 +12,8 @@ void Config::loadFromJson(const string& path)
 
     if (!file)
     {
-        cout << "no file" << endl;
+        // This will turn to using the default fields specified in the Config class
+        cout << "Couldn't open file at: " << path << endl << "Starting CLI with default configurations" << endl << endl;
         return;
     }
 

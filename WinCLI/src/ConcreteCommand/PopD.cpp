@@ -22,9 +22,7 @@ void Popd::execute(CliContext& ctx, const vector<string>& args)
         cout << endl;
         return;
     }
-
-    vector<string> prevDir = { args[0], (ctx.getStack().top().string())};
-    _cdHelper->execute(ctx, args);
+    _cdHelper->execute(ctx, { "cd", ctx.getStack().top().string() });
 
     ctx.cliStackPop();
 }
