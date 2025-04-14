@@ -7,7 +7,7 @@
 using namespace std;
 using namespace filesystem;
 
-void Dir::execute(CliContext& ctx, const vector<string>& args)
+void Dir::execute(CliContext* ctx, const vector<string>& args)
 {
     if (args.size() > 2)
     {
@@ -34,7 +34,7 @@ void Dir::execute(CliContext& ctx, const vector<string>& args)
     }
     else
     {
-        string currentDir = ctx.getCurrentDirStr();
+        string currentDir = ctx->getCurrentDirStr();
         cout << "\nDirectory of " << currentDir << "\n" << endl;
         for (const auto& entry : directory_iterator(currentDir))
         {

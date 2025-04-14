@@ -10,7 +10,7 @@ class Command
 {
 public:
     virtual ~Command() = default;
-    virtual void execute(CliContext& ctx, const std::vector<std::string>& args) = 0;
+    virtual void execute(CliContext* ctx, const std::vector<std::string>& args) = 0;
     virtual std::string getName() const = 0;
     virtual std::string getPrefix() const = 0;
 };

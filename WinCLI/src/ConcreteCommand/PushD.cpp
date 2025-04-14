@@ -10,7 +10,7 @@ using namespace filesystem;
 
 Pushd::Pushd(Command* cdHelper) : _cdHelper(cdHelper) {}
 
-void Pushd::execute(CliContext& ctx, const vector<string>& args)
+void Pushd::execute(CliContext* ctx, const vector<string>& args)
 {
     if (args.size() > 2)
     {
@@ -24,7 +24,7 @@ void Pushd::execute(CliContext& ctx, const vector<string>& args)
 
         if (Utils::verifyPath(userPath))
         {
-            ctx.cliStackPush(ctx.getCurrentDir());
+            ctx->cliStackPush(ctx->getCurrentDir());
             _cdHelper->execute(ctx, args);
         }
         else

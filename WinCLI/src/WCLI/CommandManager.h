@@ -14,7 +14,7 @@ public:
     CommandManager();
     ~CommandManager();
 
-    void executeCommand(CliContext& ctx, const std::vector<std::string>& args);
+    void executeCommand(CliContext* ctx, const std::vector<std::string>& args);
 
 private:
     std::unordered_map<std::string, Command*> _commands;

@@ -22,7 +22,7 @@ void Help::initialiseHelpMap()
     _helpTexts["cls"] = { "cls", "Clears the screen." };
 }
 
-void Help::execute(CliContext& ctx, const vector<string>& args)
+void Help::execute(CliContext* ctx, const vector<string>& args)
 {
     if (args.size() > 2)
     {

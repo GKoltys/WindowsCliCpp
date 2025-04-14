@@ -9,7 +9,7 @@ using namespace filesystem;
 
 Popd::Popd(Command* cdHelper) : _cdHelper(cdHelper) {}
 
-void Popd::execute(CliContext& ctx, const vector<string>& args)
+void Popd::execute(CliContext* ctx, const vector<string>& args)
 {
     if (args.size() > 1)
     {
@@ -17,12 +17,12 @@ void Popd::execute(CliContext& ctx, const vector<string>& args)
         return;
     }
 
-    if (ctx.getStack().size() == 0)
+    if (ctx->getStack().size() == 0)
     {
         cout << endl;
         return;
     }
-    _cdHelper->execute(ctx, { "cd", ctx.getStack().top().string() });
+    _cdHelper->execute(ctx, { "cd", ctx->getStack().top().string() });
 
-    ctx.cliStackPop();
+    ctx->cliStackPop();
 }

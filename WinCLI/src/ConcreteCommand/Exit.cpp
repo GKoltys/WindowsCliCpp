@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Exit::execute(CliContext& ctx, const vector<string>& args)
+void Exit::execute(CliContext* ctx, const vector<string>& args)
 {
-    ctx.changeExitState();
+    ctx->changeExitState();
 }

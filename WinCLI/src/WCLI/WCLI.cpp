@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cstring>
+#include "CliContext.h"
+#include "Config.h"
+#include "CommandManager.h"
 #include "Logger.h"
 #include "WCLI.h"
 #include "Utils.h"
@@ -7,18 +10,25 @@
 
 using namespace std;
 
-WCLI::WCLI() : _context(CliContext()), _config(Config()), _cmdManager(CommandManager()) {}
+WCLI::WCLI() : _context(new CliContext()), _config(new Config()), _cmdManager(new CommandManager()) {}
+
+WCLI::~WCLI()
+{
+    delete _context;
+    delete _config;
+    delete _cmdManager;
+}
 
 void WCLI::applyConfig()
 {
-    Logger::setDebugMode(_config.isLog());
+    Logger::setDebugMode(_config->isLog());
 
-    string themeCommand = "color " + _config.getBackgroundColour() + _config.getTextColour();
+    string themeCommand = "color " + _config->getBackgroundColour() + _config->getTextColour();
     system(themeCommand.c_str());
     
-    if (_config.isLogFile())
+    if (_config->isLogFile())
     {
-        Logger::init(_config.getLogFilename());
+        Logger::init(_config->getLogFilename());
     }
 
     Logger::log("Config applied");
@@ -26,7 +36,7 @@ void WCLI::applyConfig()
 
 void WCLI::runWithConfigFile(const string& path)
 {
-    _config.loadFromJson(path);
+    _config->loadFromJson(path);
     run();
 }
 
@@ -36,19 +46,19 @@ void WCLI::run()
 
     Logger::log("Shell started");
 
-    while (!_context.getExitState())
+    while (!_context->getExitState())
     {
         try
         {
             string cmdIn;
 
-            cout << _context.getCurrentDirStr() << ">";
+            cout << _context->getCurrentDirStr() << ">";
             getline(cin, cmdIn);
 
             if (cmdIn != "")
             {
                 CommandInput command(cmdIn, Utils::parse(cmdIn));
-                _cmdManager.executeCommand(_context, command.getArgs());
+                _cmdManager->executeCommand(_context, command.getArgs());
             }
         }
         catch (const exception& e)

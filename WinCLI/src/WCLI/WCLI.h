@@ -2,22 +2,25 @@
 #define WCLI_H
 
 #include <string>
-#include "CliContext.h"
-#include "Config.h"
-#include "CommandManager.h"
+
+class CliContext;
+class Config;
+class CommandManager;
 
 class WCLI
 {
 public:
     WCLI();
+    ~WCLI();
+
     void applyConfig();
     void run();
     void runWithConfigFile(const std::string& path);
 
 private:
-    CliContext _context;
-    Config _config;
-    CommandManager _cmdManager;
+    CliContext* _context;
+    Config* _config;
+    CommandManager* _cmdManager;
 };
 
 #endif

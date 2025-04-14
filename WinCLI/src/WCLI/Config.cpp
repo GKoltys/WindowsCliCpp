@@ -23,15 +23,30 @@ void Config::loadFromJson(const string& path)
     if (configJson.contains("logging"))
     {
         const json& log = configJson["logging"];
-        _logToConsole = log.value("consoleLog", false);
-        _logToFile = log.value("fileLog", false);
-        _logFilename = log.value("filename", "WCLILogger.txt");
+        if (log.contains("consoleLog") && log["consoleLog"].is_boolean())
+        {
+            _logToConsole = log["consoleLog"];
+        }
+        if (log.contains("fileLog") && log["fileLog"].is_boolean())
+        {
+            _logToFile = log["fileLog"];
+        }
+        if (log.contains("filename") && log["filename"].is_string())
+        {
+            _logFilename = log["filename"];
+        }
     }
 
     if (configJson.contains("theme"))
     {
         const json& theme = configJson["theme"];
-        _backgroundColour = theme.value("backgroundColour", "0");
-        _textColour = theme.value("textColour", "F");
+        if (theme.contains("backgroundColour") && theme["backgroundColour"].is_string())
+        {
+            _backgroundColour = theme["backgroundColour"];
+        }
+        if (theme.contains("textColour") && theme["textColour"].is_string())
+        {
+            _textColour = theme["textColour"];
+        }
     }
 }

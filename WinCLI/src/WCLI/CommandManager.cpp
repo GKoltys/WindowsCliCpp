@@ -31,7 +31,7 @@ CommandManager::~CommandManager()
     }
 }
 
-void CommandManager::executeCommand(CliContext& ctx, const vector<string>& args)
+void CommandManager::executeCommand(CliContext* ctx, const vector<string>& args)
 {
     if (args.empty())
     {

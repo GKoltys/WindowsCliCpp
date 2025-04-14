@@ -41,9 +41,6 @@
     <ClInclude Include="src\WCLI\Wcli.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Command\DirectoryCommand.cpp" />
-    <ClCompile Include="src\Command\OutputCommand.cpp" />
-    <ClCompile Include="src\Command\StdCommand.cpp" />
     <ClCompile Include="src\ConcreteCommand\Cd.cpp" />
     <ClCompile Include="src\ConcreteCommand\Cls.cpp" />
     <ClCompile Include="src\ConcreteCommand\Dir.cpp" />

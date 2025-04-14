@@ -3,12 +3,11 @@
 #include "Utils.h"
 
 using namespace std;
-using namespace Utils;
 using namespace filesystem;
 
 CliContext::CliContext() : 
-    _currentDirStr(currentPath().string()),
-    _currentDir(currentPath()),
+    _currentDirStr(Utils::currentPath().string()),
+    _currentDir(Utils::currentPath()),
     _dirStack(stack<path>()),
     _exitState(false) {}
 

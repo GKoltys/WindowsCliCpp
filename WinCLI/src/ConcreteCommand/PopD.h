@@ -8,7 +8,7 @@ class Popd : public DirectoryCommand
 public:
     Popd(Command* cdHelper);
 
-    void execute(CliContext& ctx, const std::vector<std::string>& args) override;
+    void execute(CliContext* ctx, const std::vector<std::string>& args) override;
 
 protected:
     std::string getName() const override { return "popd"; }

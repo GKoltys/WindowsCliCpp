@@ -7,7 +7,7 @@
 using namespace std;
 using namespace filesystem;
 
-void Cd::execute(CliContext& ctx, const vector<string>& args)
+void Cd::execute(CliContext* ctx, const vector<string>& args)
 {
     if (args.size() > 2)
     {
@@ -27,12 +27,12 @@ void Cd::execute(CliContext& ctx, const vector<string>& args)
         
         if (userPath == "..")
         {
-            const path current = ctx.getCurrentDir();
+            const path current = ctx->getCurrentDir();
             const path parent = current.parent_path();
 
             if (!parent.empty())
             {
-                ctx.changeDir(parent);
+                ctx->changeDir(parent);
                 cout << endl;
             }
             else
@@ -42,10 +42,10 @@ void Cd::execute(CliContext& ctx, const vector<string>& args)
             return;
         }
 
-        path target = ctx.getCurrentDir() / userPath;
+        path target = ctx->getCurrentDir() / userPath;
         if (Utils::verifyPath(target))
         {
-            ctx.changeDir(target);
+            ctx->changeDir(target);
             cout << endl;
         }
         else
@@ -55,6 +55,6 @@ void Cd::execute(CliContext& ctx, const vector<string>& args)
     }
     else
     {
-        cout << ctx.getCurrentDirStr() << endl << endl;
+        cout << ctx->getCurrentDirStr() << endl << endl;
     }
 }
