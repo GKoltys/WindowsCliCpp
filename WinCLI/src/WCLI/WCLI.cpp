@@ -12,7 +12,7 @@ using namespace std;
 
 WCLI::WCLI() : _context(new CliContext()), _config(new Config()), _cmdManager(new CommandManager())
 {
-    Logger::log("CLI Initialised", "[DEBUG}");
+    Logger::log("CLI Initialised", "DEBUG");
 }
 
 WCLI::~WCLI()
@@ -21,7 +21,7 @@ WCLI::~WCLI()
     delete _config;
     delete _cmdManager;
 
-    Logger::log("CLI Destroyed", "[DEBUG}");
+    Logger::log("CLI Destroyed", "DEBUG");
 }
 
 void WCLI::applyConfig()
@@ -36,7 +36,7 @@ void WCLI::applyConfig()
         Logger::init(_config->getLogFilename());
     }
 
-    Logger::log("Config applied");
+    Logger::log("Config applied", "DEBUG");
 }
 
 void WCLI::runWithConfigFile(const string& path)
@@ -49,7 +49,7 @@ void WCLI::run()
 {
     applyConfig();
 
-    Logger::log("Shell started");
+    Logger::log("Shell started", "DEBUG");
 
     while (!_context->getExitState())
     {
@@ -69,7 +69,7 @@ void WCLI::run()
         catch (const exception& e)
         {
             cout << e.what() << endl;
-            Logger::log(e.what(), "[ERROR]");
+            Logger::log(e.what(), "ERROR");
         }
     }
 

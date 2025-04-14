@@ -15,7 +15,7 @@ void Config::loadFromJson(const string& path)
     {
         // This will turn to using the default fields specified in the Config class
         cout << "Couldn't open file at: " << path << endl << "Starting CLI with default configurations" << endl << endl;
-        Logger::log("Couldn't open file at: " + path + "Starting CLI with default configurations");
+        Logger::log("Couldn't open file at: " + path + "Starting CLI with default configurations", "INFO");
         return;
     }
 
@@ -28,14 +28,17 @@ void Config::loadFromJson(const string& path)
         if (log.contains("consoleLog") && log["consoleLog"].is_boolean())
         {
             _logToConsole = log["consoleLog"];
+            Logger::log("consoleLog applied from Json", "INFO");
         }
         if (log.contains("fileLog") && log["fileLog"].is_boolean())
         {
             _logToFile = log["fileLog"];
+            Logger::log("fileLog applied from Json", "INFO");
         }
         if (log.contains("filename") && log["filename"].is_string())
         {
             _logFilename = log["filename"];
+            Logger::log("filename applied from Json", "INFO");
         }
     }
 
@@ -45,10 +48,12 @@ void Config::loadFromJson(const string& path)
         if (theme.contains("backgroundColour") && theme["backgroundColour"].is_string())
         {
             _backgroundColour = theme["backgroundColour"];
+            Logger::log("backgroundColour applied from Json", "INFO");
         }
         if (theme.contains("textColour") && theme["textColour"].is_string())
         {
             _textColour = theme["textColour"];
+            Logger::log("textColour applied from Json", "INFO");
         }
     }
 }

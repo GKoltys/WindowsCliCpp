@@ -1,11 +1,11 @@
 {
     "logging": {
-        "consoleLog": false,
+        "consoleLog": true,
         "fileLog": true,
         "filename": "WcliLogger.txt"
     },
     "theme": {
-        "backgroundColour": "C",
-        "textColour": "E"
+        "backgroundColour": "0",
+        "textColour": "F"
     }  
 }

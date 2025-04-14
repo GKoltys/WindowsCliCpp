@@ -1,5 +1,6 @@
 #include <iostream>
 #include "CommandManager.h"
+#include "Logger.h"
 #include "../ConcreteCommand/Cd.h"
 #include "../ConcreteCommand/Cls.h"
 #include "../ConcreteCommand/Dir.h"
@@ -13,6 +14,7 @@ using namespace std;
 
 CommandManager::CommandManager()
 {
+    Logger::log("Command Manager Initialised", "DEBUG");
     _commands["cd"] = new Cd();
     _commands["cls"] = new Cls();
     _commands["dir"] = new Dir();
@@ -29,6 +31,7 @@ CommandManager::~CommandManager()
     {
         delete command;
     }
+    Logger::log("Command Manager destroyed", "DEBUG");
 }
 
 void CommandManager::executeCommand(CliContext* ctx, const vector<string>& args)
@@ -44,10 +47,12 @@ void CommandManager::executeCommand(CliContext* ctx, const vector<string>& args)
     // Make sure find() didnt return end()/last element of map
     if (chosenCommand != _commands.end())
     {
+        Logger::log(commandName + " being executed", "DEBUG");
         chosenCommand->second->execute(ctx, args);
     }
     else
     {
+        Logger::log("'" + commandName + "' is not recognised as a command.\n", "INFO");
         cout << "'" << commandName << "' is not recognised as a command.\n";
     }
 }
