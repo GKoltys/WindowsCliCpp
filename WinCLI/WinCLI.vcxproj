@@ -59,7 +59,7 @@
     <ClCompile Include="src\WCLI\WinCli.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Config\config.json" />
+    <None Include="config.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

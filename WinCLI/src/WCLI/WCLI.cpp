@@ -10,13 +10,18 @@
 
 using namespace std;
 
-WCLI::WCLI() : _context(new CliContext()), _config(new Config()), _cmdManager(new CommandManager()) {}
+WCLI::WCLI() : _context(new CliContext()), _config(new Config()), _cmdManager(new CommandManager())
+{
+    Logger::log("CLI Initialised", "[DEBUG}");
+}
 
 WCLI::~WCLI()
 {
     delete _context;
     delete _config;
     delete _cmdManager;
+
+    Logger::log("CLI Destroyed", "[DEBUG}");
 }
 
 void WCLI::applyConfig()
@@ -63,6 +68,7 @@ void WCLI::run()
         }
         catch (const exception& e)
         {
+            cout << e.what() << endl;
             Logger::log(e.what(), "[ERROR]");
         }
     }

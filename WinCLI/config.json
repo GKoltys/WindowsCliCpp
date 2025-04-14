@@ -5,7 +5,7 @@
         "filename": "WcliLogger.txt"
     },
     "theme": {
-        "backgroundColour": "2",
-        "textColour": "F"
+        "backgroundColour": "C",
+        "textColour": "E"
     }  
 }

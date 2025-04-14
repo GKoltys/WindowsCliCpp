@@ -1,6 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include "Config.h"
+#include "Logger.h"
 #include "../Libs/json.hpp"
 
 using json = nlohmann::json;
@@ -14,6 +15,7 @@ void Config::loadFromJson(const string& path)
     {
         // This will turn to using the default fields specified in the Config class
         cout << "Couldn't open file at: " << path << endl << "Starting CLI with default configurations" << endl << endl;
+        Logger::log("Couldn't open file at: " + path + "Starting CLI with default configurations");
         return;
     }
 
