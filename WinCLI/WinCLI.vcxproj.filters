@@ -140,7 +140,7 @@
     <ClCompile Include="src\WCLI\Wcli.cpp">
       <Filter>Wcli\Source</Filter>
     </ClCompile>
-    <ClCompile Include="src\WCLI\WinCli.cpp">
+    <ClCompile Include="src\WCLI\Main.cpp">
       <Filter>Wcli\Source</Filter>
     </ClCompile>
   </ItemGroup>

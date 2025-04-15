@@ -1,7 +1,7 @@
 {
     "logging": {
-        "consoleLog": true,
-        "fileLog": true,
+        "consoleLog": false,
+        "fileLog": false,
         "filename": "WcliLogger.txt"
     },
     "theme": {

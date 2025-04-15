@@ -56,7 +56,7 @@
     <ClCompile Include="src\WCLI\Logger.cpp" />
     <ClCompile Include="src\WCLI\Utils.cpp" />
     <ClCompile Include="src\WCLI\Wcli.cpp" />
-    <ClCompile Include="src\WCLI\WinCli.cpp" />
+    <ClCompile Include="src\WCLI\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
