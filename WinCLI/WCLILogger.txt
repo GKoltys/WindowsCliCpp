@@ -1,0 +1,4 @@
+2025-04-15 17:27:30 [DEBUG] Config applied
+2025-04-15 17:27:30 [DEBUG] Shell started
+2025-04-15 17:27:31 [DEBUG] exit being executed
+2025-04-15 17:27:31 [DEBUG] Exit state changed
