@@ -15,7 +15,7 @@ public:
 private:
     bool _logToConsole = false;
     bool _logToFile = false;
-    std::string _logFilename = "default.txt";
+    std::string _logFilename = "WinCli.log";
     std::string _backgroundColour = "0";
     std::string _textColour = "F";
 };

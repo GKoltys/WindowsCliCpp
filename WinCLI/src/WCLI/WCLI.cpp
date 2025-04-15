@@ -71,6 +71,11 @@ void WCLI::run()
             cout << e.what() << endl;
             Logger::log(e.what(), "ERROR");
         }
+        catch (...)
+        {
+            cout << "[ERROR] Unknown error occurred." << endl;
+            Logger::log("Unknown error occurred.", "ERROR");
+        }
     }
 
     if (Logger::getFileState())

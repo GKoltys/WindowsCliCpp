@@ -44,7 +44,6 @@ void CommandManager::executeCommand(CliContext* ctx, const vector<string>& args)
     const string& commandName = args[0];
     auto chosenCommand = _commands.find(commandName);
 
-    // Make sure find() didnt return end()/last element of map
     if (chosenCommand != _commands.end())
     {
         Logger::log(commandName + " being executed", "DEBUG");
