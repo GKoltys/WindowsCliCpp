@@ -9,19 +9,18 @@ public:
     static void init(const std::string& filename = "WCLILog.txt");
     static void close();
 
-    static void setDebugMode(const bool);
-    static bool getDebugMode();
+    static void setLogToConsole(const bool);
+    static bool getLogToConsole();
     static bool getFileState();
 
-    static void log(const std::string& message);
-    static void log(const std::string& message, const std::string& level);
+    static void log(const std::string& message, const std::string& level, const bool forceLog = false);
     static void startTestCase(const std::string& message);
     static void startTestCase(const int testID, const std::string& message);
 
 private:
     static std::ofstream _logFile;
     static bool _fileReady;
-    static bool _debugMode;
+    static bool _logToConsole;
 };
 
 #endif

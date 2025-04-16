@@ -145,8 +145,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="config.json">
+    <CopyFileToFolders Include="config.json">
       <Filter>Config</Filter>
-    </None>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>

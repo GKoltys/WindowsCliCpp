@@ -14,12 +14,12 @@ CliContext::CliContext() :
 
 void CliContext::changeDir(path newDir)
 {
-    Logger::log("Current Directory changed to: " + newDir.string(), "DEBUG");
-
     if (Utils::verifyPath(newDir))
     {
         _currentDir = newDir;
         _currentDirStr = newDir.string();
+
+        Logger::log("Current Directory changed to: " + newDir.string(), "DEBUG");
     }
 }
 

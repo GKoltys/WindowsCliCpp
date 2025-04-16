@@ -51,7 +51,6 @@ void CommandManager::executeCommand(CliContext* ctx, const vector<string>& args)
     }
     else
     {
-        Logger::log("'" + commandName + "' is not recognised as a command.\n", "INFO");
-        cout << "'" << commandName << "' is not recognised as a command.\n";
+        Logger::log("'" + commandName + "' is not recognised as a command.\n", "", true);
     }
 }

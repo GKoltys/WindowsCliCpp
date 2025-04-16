@@ -26,7 +26,7 @@ WCLI::~WCLI()
 
 void WCLI::applyConfig()
 {
-    Logger::setDebugMode(_config->isLog());
+    Logger::setLogToConsole(_config->isLog());
 
     string themeCommand = "color " + _config->getBackgroundColour() + _config->getTextColour();
     system(themeCommand.c_str());
@@ -36,7 +36,7 @@ void WCLI::applyConfig()
         Logger::init(_config->getLogFilename());
     }
 
-    Logger::log("Config applied", "DEBUG");
+    Logger::log("Config applied", "INFO");
 }
 
 void WCLI::runWithConfigFile(const string& path)
@@ -49,7 +49,7 @@ void WCLI::run()
 {
     applyConfig();
 
-    Logger::log("Shell started", "DEBUG");
+    Logger::log("Shell started", "INFO");
 
     while (!_context->getExitState())
     {
@@ -68,13 +68,11 @@ void WCLI::run()
         }
         catch (const exception& e)
         {
-            cout << e.what() << endl;
-            Logger::log(e.what(), "ERROR");
+            Logger::log(e.what(), "", true);
         }
         catch (...)
         {
-            cout << "[ERROR] Unknown error occurred." << endl;
-            Logger::log("Unknown error occurred.", "ERROR");
+            Logger::log("Unknown error occurred.", "", true);
         }
     }
 

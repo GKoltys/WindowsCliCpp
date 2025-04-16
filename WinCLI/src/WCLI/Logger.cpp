@@ -15,7 +15,7 @@ ofstream Logger::_logFile;
 // Ensures only one file is open at a time
 bool Logger::_fileReady = false;
 
-bool Logger::_debugMode = false;
+bool Logger::_logToConsole = false;
 
 // Opens log file on users command
 void Logger::init(const std::string& filename)
@@ -55,14 +55,14 @@ void Logger::close()
     }
 }
 
-void Logger::setDebugMode(const bool debugMode)
+void Logger::setLogToConsole(const bool logToConsole)
 {
-    _debugMode = debugMode;
+    _logToConsole = logToConsole;
 }
 
-bool Logger::getDebugMode()
+bool Logger::getLogToConsole()
 {
-    return _debugMode;
+    return _logToConsole;
 }
 
 bool Logger::getFileState()
@@ -70,28 +70,17 @@ bool Logger::getFileState()
     return _fileReady;
 }
 
-// Standard log with only message
-void Logger::log(const std::string& message)
-{
-    string logEntry = Utils::getDateTime() + " " + message + "\n";
-
-    if (_debugMode)
-    {
-        cout << logEntry << endl;
-    }
-
-    if (_fileReady)
-    {
-        _logFile << logEntry << endl;
-    }
-}
-
-// Log with extra log level
-void Logger::log(const std::string& message, const string& level)
+// Standard log with extra log level and force parameter
+void Logger::log(const std::string& message, const string& level, const bool forceLog)
 {
     string logEntry = Utils::getDateTime() + " [" + level + "] " + message + "\n";
 
-    if (_debugMode)
+    if (forceLog)
+    {
+        cout << message << endl << endl;
+    }
+
+    if (_logToConsole)
     {
         cout << logEntry << endl;
     }
@@ -107,7 +96,7 @@ void Logger::startTestCase(const std::string& message)
 {
     string logEntry = "\n---- " + message + " ----\n";
 
-    if (_debugMode)
+    if (_logToConsole)
     {
         cout << logEntry << endl;
     }
@@ -123,7 +112,7 @@ void Logger::startTestCase(const int testID, const std::string& message)
 {
     string logEntry = "\n---- Test Case " + to_string(testID) + ": " + message + " ----" + "\n";
 
-    if (_debugMode)
+    if (_logToConsole)
     {
         cout << logEntry << endl;
     }
