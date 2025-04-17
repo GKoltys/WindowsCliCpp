@@ -2,7 +2,7 @@
     "logging": {
         "consoleLog": false,
         "fileLog": false,
-        "filename": "WcliLogger.txt"
+        "filename": "WcliLogger.log"
     },
     "theme": {
         "backgroundColour": "0",

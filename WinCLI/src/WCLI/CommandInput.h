@@ -11,7 +11,7 @@ public:
     
     std::string getRawCmd() const { return _rawCommand; }
     std::vector<std::string> getArgs() const { return _parsed; }
-    int getArgCount() const;
+    size_t getArgCount() const;
 
 private: 
     std::string _rawCommand;

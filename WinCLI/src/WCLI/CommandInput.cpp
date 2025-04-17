@@ -7,7 +7,7 @@ CommandInput::CommandInput(std::string rawIn, std::vector<std::string> parsed) :
     _parsed(parsed) 
 {}
 
-int CommandInput::getArgCount() const
+size_t CommandInput::getArgCount() const
 {
     return _parsed.size();
 }
