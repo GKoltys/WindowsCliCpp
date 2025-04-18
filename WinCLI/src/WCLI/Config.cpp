@@ -12,7 +12,6 @@ void Config::loadFromJson(const string& path)
 
     if (!file)
     {
-        // This will turn to using the default fields specified in the Config class
         Logger::log("Couldn't open file at: " + path, "", true);
         
         json defaultJson = toJson();
