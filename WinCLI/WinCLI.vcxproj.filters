@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libs">
+      <UniqueIdentifier>{b3839fea-6e23-4131-908b-6ddf19676c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{18ffb51e-aaa9-4835-9b8f-178b1df51211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConcreteCommand">
+      <UniqueIdentifier>{e0ee1e38-3f81-4975-aa3c-556965438e6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wcli">
+      <UniqueIdentifier>{bbaeb723-7e97-46b9-9cd0-d3758d2299e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command\Header">
+      <UniqueIdentifier>{de5de283-dc4a-4b34-8f2e-dd9cd5a3c2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConcreteCommand\Header">
+      <UniqueIdentifier>{a632f208-8d5c-48eb-8df3-d87335ccaa29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConcreteCommand\Source">
+      <UniqueIdentifier>{a9a1136b-5090-4b50-8648-ef057a1bba03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wcli\Header">
+      <UniqueIdentifier>{5fe94459-1c0e-475b-b61d-ac688d7a0413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wcli\Source">
+      <UniqueIdentifier>{b63d5599-1aa5-4ca8-8626-e3ad02280877}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Libs\json.hpp">
+      <Filter>libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\StdCommand.h">
+      <Filter>Command\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\OutputCommand.h">
+      <Filter>Command\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\DirectoryCommand.h">
+      <Filter>Command\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command\Command.h">
+      <Filter>Command\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Cd.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Cls.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Dir.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Echo.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Exit.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Help.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Popd.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConcreteCommand\Pushd.h">
+      <Filter>ConcreteCommand\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\CommandInput.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\CliContext.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\CommandManager.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Config.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Logger.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Utils.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WCLI\Wcli.h">
+      <Filter>Wcli\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ConcreteCommand\Cd.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Cls.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Dir.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Echo.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Exit.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Help.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Popd.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConcreteCommand\Pushd.cpp">
+      <Filter>ConcreteCommand\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\CliContext.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\CommandInput.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\CommandManager.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Config.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Logger.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Utils.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Wcli.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WCLI\Main.cpp">
+      <Filter>Wcli\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
